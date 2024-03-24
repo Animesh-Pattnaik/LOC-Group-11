@@ -2,23 +2,27 @@
 using namespace std;
 int main()
 {
-	int a,b,i;
+	int a,b;
+	char ch;
 	cout<<"Enter the two numbers"<<endl;
 	cin>>a>>b;
-	cout<<"Enter 1 for addition\nEnter 2 for substraction\nEnter 3 for multiplication\nEnter 4 for division\n";
-	cin>>i;
-	switch(i)
+	cout<<"Enter the operators:+,-,*,/"<<endl;
+	cin>>ch;
+	switch(ch)
 	{
-		case 1:
+		case '+':
 			cout<<a+b;
 			break;
-		case 2:
+		case '-':
 			cout<<a-b;
 			break;
-		case 3:
+		case '*':
 			cout<<a*b;
 			break;
-		case 4:
+		case '/':
+			if(b==0)
+			cout<<"Division is not possible";
+			else
 			cout<<(double)a/b;
 			break;
 		default:
